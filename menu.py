@@ -10,9 +10,10 @@ class Menu(tk.Frame):
         self.window = window
         self.option = 0     # 0:menu, 1:material, 2:vies
         self.title = tk.Label(self, text="Menu muntanya", font=TITLE_FONT, bg=self.cget("bg"))
-        self.bt_material = tk.Button(self, text="Material muntanya", font=LABEL_FONT, 
+        self.bt_material = tk.Button(self, text="Material muntanya", font=LABEL_FONT, cursor="hand2", 
             command=self.option_material)
-        self.bt_vies = tk.Button(self, text="Vies d'escalada", font=LABEL_FONT, command=self.option_vies)
+        self.bt_vies = tk.Button(self, text="Vies d'escalada", font=LABEL_FONT, cursor="hand2", 
+            command=self.option_vies)
         self.material = MaterialView(self.window)
         self.vies = ViesView(self.window)
         self.bt_back = tk.Label(self.window, text="<< Menu", font=LABEL_FONT, bg=self.window.cget("bg"), 
